@@ -1,0 +1,25 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="tasks content">
+    <h2>All Tasks</h2>
+
+    <% if (tasks.length > 0) { %>
+      <% tasks.forEach(task => { %>
+        <a class="single" href="/tasks/<%= task._id %>">
+          <h3 class="title"><%= task.title %></h3>
+          <p class="deadline"><%= task.deadline %></p>
+        </a>
+      <% }) %>
+    <% } else { %>
+      <p>There are no remaining tasks to do.</p>
+    <% } %>
+    
+  </div>
+
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>
