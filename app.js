@@ -32,7 +32,7 @@ app.get('/tasks/create', (req, res) => {
 });
 
 app.get('/tasks', (req, res) => {
-  Task.find().sort({createdAt: -1})
+  Task.find().sort({deadline: 1})
     .then(result => {
       res.render('index', {tasks: result, title: 'All tasks'});
     })

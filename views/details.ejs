@@ -9,7 +9,9 @@
     <div class="content">
       <p><%= task.body %></p>
     </div>
-    <a class="delete" data-del="<%= task._id %>">delete</a>
+    <a class="delete" data-del="<%= task._id %>">
+      <button class="delete-btn">Delete</button>
+    </a>
   </div>
 
   <%- include("./partials/footer.ejs") %>

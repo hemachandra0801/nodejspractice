@@ -7,14 +7,14 @@ const taskSchema = new Schema({
     required: true,
   },
   deadline: {
-    type: String,
+    type: Date,
     required: true,
   },
   body: {
     type: String,
     required: true
   },
-}, {timestamps: true});
+});
 
 const Task = mongoose.model('Task', taskSchema);
 module.exports = Task;
